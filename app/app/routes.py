@@ -10,4 +10,5 @@ def home():
     r = requests.get(url)
     jeffs = json.loads(r.text)['gfycats']
     src = random.choice(jeffs)['gfyName']
+    
     return render_template('home.html', src=src)
